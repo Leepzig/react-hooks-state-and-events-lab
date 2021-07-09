@@ -2,6 +2,10 @@ import React from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
+
+
+
+
   return (
     <div className="ShoppingList">
       <div className="Filter">
@@ -14,7 +18,12 @@ function ShoppingList({ items }) {
       </div>
       <ul className="Items">
         {items.map((item) => (
-          <Item key={item.id} name={item.name} category={item.category} />
+          <Item 
+          key={item.id} 
+          name={item.name} 
+          category={item.category} 
+          id={item.id} 
+          items={items}/>
         ))}
       </ul>
     </div>
